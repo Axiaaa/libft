@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:39 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 14:05:31 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/11 15:44:42 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_is_sep(char c, char charset)
 	return (c == charset);
 }
 
-int	ft_len_word(char *str, char charset)
+int	ft_len_word(const char *str, char charset)
 {
 	int	len;
 
@@ -28,7 +28,7 @@ int	ft_len_word(char *str, char charset)
 	return (len + 1);
 }
 
-int	ft_len_tab(char *str, char charset)
+int	ft_len_tab(const char *str, char charset)
 {
 	int	x;
 	int	words;
@@ -47,7 +47,7 @@ int	ft_len_tab(char *str, char charset)
 	return (words);
 }
 
-void	ft_write_word(char **tab, char *str, char charset)
+void	ft_write_word(char **tab, const char *str, char charset)
 {
 	int	len_tab;
 
@@ -71,7 +71,7 @@ void	ft_write_word(char **tab, char *str, char charset)
 	tab[y] = 0;
 }
 
-char	**ft_split(char *str, char charset)
+char	**ft_split(char const *str, char charset)
 {
 	char	**tab;
 
@@ -82,13 +82,13 @@ char	**ft_split(char *str, char charset)
 	return (tab);
 }
 
-// int	main(void)
-// {
-// 	char	**tab;
-// 	int		c;
+int	main(void)
+{
+	char	**tab;
+	int		c;
 
-// 	tab = ft_split("j'aime les pates sucrées au sucres", ' ');
-// 	c = 0;
-// 	while (tab[c])
-// 		printf("%s\n", tab[c++]);
-// }
+	tab = ft_split("j'aime les pates sucrées au sucres", ' ');
+	c = 0;
+	while (tab[c])
+		printf("%s\n", tab[c++]);
+}
