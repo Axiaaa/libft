@@ -1,10 +1,4 @@
-int *ft_memset(int *s, int c, unsigned int n)
+int ft_memset(const char *str, int n, char c)
 {
-    unsigned int i;
 
-    i = 0;
-    
-    while ((s[i]) && i < n)
-        s[i++] = c;
-    return (s);
 }
