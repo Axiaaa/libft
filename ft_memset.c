@@ -6,11 +6,13 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:18 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 13:55:19 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/11 15:36:57 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_memset(const char *str, int n, char c)
 {
-
+    (void)c;
+    (void)str; 
+    return n;
 }
