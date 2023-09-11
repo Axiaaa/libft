@@ -6,19 +6,19 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:39 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 15:44:42 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/11 15:46:23 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-int	ft_is_sep(char c, char charset)
+static int	ft_is_sep(char c, char charset)
 {
 	return (c == charset);
 }
 
-int	ft_len_word(const char *str, char charset)
+static int	ft_len_word(const char *str, char charset)
 {
 	int	len;
 
@@ -28,7 +28,7 @@ int	ft_len_word(const char *str, char charset)
 	return (len + 1);
 }
 
-int	ft_len_tab(const char *str, char charset)
+static int	ft_len_tab(const char *str, char charset)
 {
 	int	x;
 	int	words;
@@ -47,7 +47,7 @@ int	ft_len_tab(const char *str, char charset)
 	return (words);
 }
 
-void	ft_write_word(char **tab, const char *str, char charset)
+static void	ft_write_word(char **tab, const char *str, char charset)
 {
 	int	len_tab;
 
