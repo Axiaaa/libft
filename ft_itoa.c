@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:09 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 14:23:53 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/11 14:56:51 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ static	char	*tab_writing(int nb, unsigned int n, int index, char *dest)
 char	*ft_itoa(int nb)
 {
 	unsigned int	nb_count;
-	int				i;
 	unsigned int	n;
+	int				i;
 	char			*dest;
 
 	i = 1;
