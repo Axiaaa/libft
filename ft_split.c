@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:39 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 15:46:23 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/11 16:14:23 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static void	ft_write_word(char **tab, const char *str, char charset)
 		tab[y][z] = '\0';
 		y++;
 	}
-	tab[y] = 0;
+	tab[y] = (void *)0;
 }
 
 char	**ft_split(char const *str, char charset)
@@ -86,8 +86,7 @@ int	main(void)
 {
 	char	**tab;
 	int		c;
-
-	tab = ft_split("j'aime les pates sucrées au sucres", ' ');
+	tab = ft_split("   j'aime les      pates sucrées au sucres      ", ' ');
 	c = 0;
 	while (tab[c])
 		printf("%s\n", tab[c++]);
