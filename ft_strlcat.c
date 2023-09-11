@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcamerly <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 10:53:30 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/08/15 12:33:41 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/11 13:56:09 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_strlen(char *str)
 {
 	int	i;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/11 13:55:09 by lcamerly          #+#    #+#             */
+/*   Updated: 2023/09/11 13:55:09 by lcamerly         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 static char	*ft_case_zero(char *dest)
@@ -15,7 +27,7 @@ char	*ft_itoa(int nb)
 	unsigned int	n;
 	char			*dest;
 
-	i = 0;
+	i = 1;
 	if (nb == 0)
 		return (ft_case_zero(dest));
 	if (nb < 0)
@@ -31,7 +43,6 @@ char	*ft_itoa(int nb)
 		nb_count = nb_count / 10;
 		i++;
 	}
-	i++;
 	dest = malloc(sizeof(char) * (i + 1));
 	if (nb < 0)
 		dest[0] = '-';
