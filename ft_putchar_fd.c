@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:21 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 15:45:37 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 18:53:59 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,3 @@ void ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 
-int main()
-{
-	ft_putchar_fd('d', 1);
-}

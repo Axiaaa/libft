@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:25 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:40:15 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 18:56:55 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,13 @@
 
 void ft_putendl_fd(char *s, int fd)
 {
-	int i;
 
-	i = 0;
-	while (s[i])
-	{
-		write(fd, &s[i], 1);
-		i++;
-	}
+	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
 
-int main()
+int main(int ac, char **av)
 {
-	ft_putendl_fd("test", 1);
+	ac ++;
+	ft_putendl_fd(av[1], 1);
 }

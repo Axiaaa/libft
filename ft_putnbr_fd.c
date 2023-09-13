@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:34 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:40:12 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 19:00:15 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,3 @@ void ft_putnbr_fd(int n, int fd)
 	temp = nb % 10 + '0';
 	write(fd, &temp, 1);
 }
-/*
-int main()
-{
-	//ft_putnbr_fd(-5678, 1);
-	ft_putnbr_fd(-2147483648, 1);
-}*/
