@@ -6,23 +6,24 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 10:34:41 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:41:17 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:25:16 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(int nmemb, int size);
+void *ft_calloc(size_t nmemb, size_t size)
 {
 
     int i;
     int j;
-    void* dest; 
+    int* dest; 
 
+    j = 0;
     i = nmemb * size;
     dest = malloc(nmemb * size);
     while (j < i)
-        dest[i++] = 0;
+        dest[j++] = 0;
     return dest;
 }
 

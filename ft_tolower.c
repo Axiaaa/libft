@@ -6,14 +6,15 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:56:35 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:38:21 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:23:20 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ft_tolower(char c)
+int ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (c + 32);
+	return (0);
 }

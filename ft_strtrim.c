@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:56:40 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:38:30 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:22:25 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ char *ft_trim(char const *s1, char const set)
     return (str);
 }
 
+
+/*
 int main()
 {
     char *str = "aaaJe suis une fluteaaa";
     char set = 'a';
     printf("%s", ft_trim(str, set));
-}
+}*/

@@ -6,15 +6,15 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:18 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:40:20 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:59:24 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
-int ft_memset(const char *str, int n, char c)
+void ft_memset(void *s, int c, size_t n)
 {
-    (void)c;
-    (void)str; 
-    return n;
+    (void)s;
+    (void)c; 
+    (void)n;
 }

@@ -6,14 +6,15 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:56:31 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:38:16 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:23:26 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char ft_toupper(char c)
+int ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);
+	return (0);
 }

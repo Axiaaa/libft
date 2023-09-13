@@ -6,27 +6,17 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 10:10:49 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:39:22 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 12:18:44 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = ft_strlen(src);
 	j = 0;
