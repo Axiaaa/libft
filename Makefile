@@ -14,10 +14,9 @@ DIR = ./objs
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	ar rcs $(NAME) $(addprefix $(DIR)/, $(OBJ))
 	@echo "$(NAME) created"
 
-#Must compile .o in DIR
 %.o: %.c | $(DIR)
 	$(CC) $(FLAGS) -c $< -o $(DIR)/$@
 
