@@ -6,9 +6,12 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 10:10:49 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 13:56:52 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:39:22 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {

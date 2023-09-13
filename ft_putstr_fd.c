@@ -6,11 +6,11 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:36 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 13:55:44 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:40:10 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putstr_fd(char *s, int fd)
 {

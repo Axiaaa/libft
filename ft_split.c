@@ -6,12 +6,11 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:39 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 16:14:23 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:42:31 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_is_sep(char c, char charset)
 {
@@ -82,6 +81,7 @@ char	**ft_split(char const *str, char charset)
 	return (tab);
 }
 
+/*
 int	main(void)
 {
 	char	**tab;
@@ -90,4 +90,4 @@ int	main(void)
 	c = 0;
 	while (tab[c])
 		printf("%s\n", tab[c++]);
-}
+}*/

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_sdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:49 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 13:55:51 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:39:42 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char *ft_strdup(char *str)
+char *ft_strdup(const char *s)
 {
 	int len;
 	int i;	
@@ -20,12 +20,12 @@ char *ft_strdup(char *str)
 
 	len = 0;
 	i = 0;
-	while (str[len])
+	while (s[len])
 		len++;
 	dest = malloc(sizeof(char) * (len + 1));
-	while (str[i])
+	while (s[i])
 	{
-		dest[i] = str[i];
+		dest[i] = s[i];
 		i++;
 	}
 	dest[i] = '\0';

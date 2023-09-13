@@ -6,12 +6,12 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:56:40 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 16:48:32 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:38:30 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int ft_is_set(char c, char set)
 {

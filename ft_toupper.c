@@ -6,9 +6,11 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:56:31 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 13:56:55 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:38:16 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char ft_toupper(char c)
 {

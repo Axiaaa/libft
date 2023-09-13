@@ -6,11 +6,11 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:09 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 15:51:45 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:40:34 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static	char	*ft_case_zero(char *dest)
 {

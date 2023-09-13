@@ -6,21 +6,12 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 10:53:30 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 13:56:09 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 11:45:25 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
@@ -46,11 +37,11 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (i + j);
 }
 
-
+/*
 int main()
 {	
 	char s1[] = "Prout";
 	char s2[] = "Crout";
 	ft_strlcat(s1, s2, 11);
 	printf("%s\n", s1);
-}
+}*/
