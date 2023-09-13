@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:26:23 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 11:58:28 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/13 15:46:56 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 typedef unsigned long size_t;
-
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -35,6 +34,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void 	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char 	*ft_strdup(const char *str);
