@@ -6,88 +6,80 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:39 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 14:23:00 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:49:17 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_is_sep(char c, char charset)
+
+static int	ft_count_word(char const *s, char c)
 {
-	return (c == charset);
-}
+	int i;
+	int word;
 
-static int	ft_len_word(const char *str, char charset)
-{
-	int	len;
-
-	len = 0;
-	while ((str[len]) && (!(ft_is_sep(str[len], charset))))
-		len++;
-	return (len + 1);
-}
-
-static int	ft_len_tab(const char *str, char charset)
-{
-	int	x;
-	int	words;
-
-	x = 0;
-	words = 0;
-	while (str[x])
+	i = 0;
+	word = 0;
+	while (s && s[i])
 	{
-		while (str[x] && ft_is_sep(str[x], charset))
-			x++;
-		if (str[x])
-			words++;
-		while (str[x] && (!(ft_is_sep(str[x], charset))))
-			x++;
+		if (s[i] != c)
+		{
+			word++;
+			while (s[i] != c && s[i])
+				i++;
+		}
+		else
+			i++;
 	}
-	return (words);
+	return (word);
 }
 
-static void	ft_write_word(char **tab, const char *str, char charset)
+static int	ft_size_word(char const *s, char c, int i)
 {
-	int	len_tab;
+	int	size;
 
-	int x, y, z;
-	x = 0, y = 0;
-	len_tab = ft_len_tab(str, charset);
-	while (y < len_tab)
+	size = 0;
+	while (s[i] != c && s[i])
 	{
-		while ((str[x]) && (ft_is_sep(str[x], charset)))
-			x++;
-		if (str[x] && (!(ft_is_sep(str[x], charset))))
-			tab[y] = malloc(sizeof(char) * (ft_len_word((str + x), charset)));
-		if (!(tab[y]))
-			return ;
-		z = 0;
-		while ((str[x]) && (!(ft_is_sep(str[x], charset))))
-			tab[y][z++] = str[x++];
-		tab[y][z] = '\0';
-		y++;
+		size++;
+		i++;
 	}
-	tab[y] = (void *)0;
+	return (size);
 }
 
-char	**ft_split(char const *str, char charset)
+static void	ft_free(char **strs, int j)
 {
-	char	**tab;
-
-	tab = malloc(sizeof(char *) * (ft_len_tab(str, charset) + 1));
-	if (!(tab))
-		return (0);
-	ft_write_word(tab, str, charset);
-	return (tab);
+	while (j-- > 0)
+		free(strs[j]);
+	free(strs);
 }
 
-/*
-int	main(void)
+char		**ft_split(char const *s, char c)
 {
-	char	**tab;
-	int		c;
-	tab = ft_split("   j'aime les      pates sucrées au sucres      ", ' ');
-	c = 0;
-	while (tab[c])
-		printf("%s\n", tab[c++]);
-}*/
+	int		i;
+	int		word;
+	char	**strs;
+	int		size;
+	int		j;
+
+	i = 0;
+	j = -1;
+	word = ft_count_word(s, c);
+	if (!(strs = (char **)malloc((word + 1) * sizeof(char *))))
+		return (NULL);
+	while (++j < word)
+	{
+		while (s[i] == c)
+			i++;
+		size = ft_size_word(s, c, i);
+		if (!(strs[j] = ft_substr(s, i, size)))
+		{
+			ft_free(strs, j);
+			return (NULL);
+		}
+		i += size;
+	}
+	strs[j] = 0;
+	return (strs);
+}
+
