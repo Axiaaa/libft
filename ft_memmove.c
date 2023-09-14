@@ -6,13 +6,13 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:33:23 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/14 13:16:00 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/14 17:25:09 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t			i;
 	unsigned char	*ptr_src;
@@ -34,4 +34,5 @@ void	ft_memmove(void *dest, const void *src, size_t n)
 			i++;
 		}
 	}
+	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:56:31 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 12:23:26 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/14 16:29:34 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);
-	return (0);
+	return (c);
 }

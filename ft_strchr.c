@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:39:45 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 13:52:07 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/14 18:03:21 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
-
-	i = -1;
-
-	while (s[i])
-		if (s[++i] == c)
-			return ((char *)&s[i]);
+	if (!s)
+		return ((char *)0);
+	while (*s)
+	{
+		if (*s == c)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == 0 && c == 0)
+		return ((char *)s);
 	return ((char *)0);
 }
