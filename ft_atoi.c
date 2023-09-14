@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:54:45 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/11 13:54:45 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:02:44 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	nb;
-	int	minus;
+	int i;
+	int minus;
+	int nb;
 
-	minus = 0;
 	i = 0;
+	minus = 1;
 	nb = 0;
-	while ((str[i] >= 8 && str[i] <= 13) || str[i] == ' ')
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\r'
+	|| str[i] == '\f' || str[i] == ' ')
 		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-')
 	{
-		if (str[i] == '-')
-			minus = 1;
+		minus = -1;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	else if (str[i] == '+')
+		i++;
+	while (ft_isdigit(str[i]))
 	{
-		nb = nb * 10 + (str[i] - '0');
+		nb = (nb * 10)  + (str[i] - '0');
 		i++;
 	}
-	if (minus == 1)
-		return (-nb);
-	return (nb);
+	return (nb * minus);
 }

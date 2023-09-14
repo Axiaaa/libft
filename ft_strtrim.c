@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:56:40 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/14 17:40:14 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:33:32 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,23 @@ static int	ft_is_set(char c, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*dest;
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	char	*str;
+	int		len;
+	int		i;
 
 	if (!s1 || !set)
-		return (NULL);
+		return ((char *)0);
+	while (*s1 && ft_is_set(*s1, set))
+		s1++;
+	len = ft_strlen(s1);
+	while (len && ft_is_set(s1[len - 1], set))
+		len--;
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return ((char *)0);
 	i = 0;
-	j = ft_strlen(s1) - 1;
-	while (ft_is_set(s1[i], set))
-		i++;
-	while (ft_is_set(s1[j], set) && j > i)
-		j--;
-	len = j - i + 1;
-	dest = malloc(sizeof(char) * (len + 1));
-	if (!dest)
-		return (NULL);
-	ft_strlcpy(dest, s1 + i, len + 1);
-	return (dest);
+	while (i < len)
+		str[i++] = *s1++;
+	str[i] = 0;
+	return (str);
 }
