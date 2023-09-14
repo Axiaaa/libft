@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:49 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 19:03:01 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:36:55 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strdup(const char *s)
 	while (s[len])
 		len++;
 	dest = malloc(sizeof(char) * (len + 1));
+	if (!dest)
+		return (NULL);
 	while (s[i])
 	{
 		dest[i] = s[i];

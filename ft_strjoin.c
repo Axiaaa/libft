@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:54 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/13 19:04:59 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/14 19:36:27 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	while (s2[j])
 		j++;
 	dest = malloc(sizeof(char) * (i + j + 1));
+	if (!dest)
+		return (NULL);
 	i = -1;
 	j = -1;
 	while (s1[++i])
