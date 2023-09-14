@@ -12,17 +12,17 @@
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int nb;
-	int temp;
+	unsigned int	nb;
+	int				temp;
 
 	if (n < 0)
 	{
 		write(fd, "-", 1);
 		nb = -n;
 	}
-	else 
+	else
 		nb = n;
 	if (nb > 9)
 		ft_putnbr_fd(nb / 10, fd);

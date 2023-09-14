@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-size_t ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	j;
@@ -38,7 +37,7 @@ size_t ft_strlcat(char *dest, const char *src, size_t size)
 }
 
 /*
-int main()
+int	main(void)
 {	
 	char s1[] = "Prout";
 	char s2[] = "Crout";

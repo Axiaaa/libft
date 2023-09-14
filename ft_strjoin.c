@@ -12,13 +12,12 @@
 
 #include "libft.h"
 
-char *ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
-	int i;
-	int j;
-	int k;
-	char *dest;	
-	
+	int		i;
+	int		j;
+	int		k;
+	char	*dest;
 
 	i = 0;
 	j = 0;
@@ -37,4 +36,3 @@ char *ft_strjoin(const char *s1, const char *s2)
 	dest[++k] = '\0';
 	return (dest);
 }
-

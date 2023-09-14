@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-static	char	*ft_case_zero(char *dest)
+static char	*ft_case_zero(char *dest)
 {
 	dest[0] = '0';
 	dest[1] = '\0';
 	return (dest);
 }
 
-static	char	*tab_writing(int nb, unsigned int n, int index, char *dest)
+static char	*tab_writing(int nb, unsigned int n, int index, char *dest)
 {
 	if (nb < 0)
 		dest[0] = '-';

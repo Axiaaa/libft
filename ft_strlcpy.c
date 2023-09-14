@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
@@ -40,7 +39,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	return (i);
 }
 /*
-int	main()
+int	main(void)
 {
 	char source[] = "hello world";
 	char dest[25];

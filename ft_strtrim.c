@@ -10,38 +10,39 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-static int ft_is_set(char c, char set)
+static int	ft_is_set(char c, char set)
 {
-    return (c == set);
+	return (c == set);
 }
 
-char *ft_trim(char const *s1, char const set) 
+char	*ft_trim(char const *s1, char const set)
 {
-    int len = 0;
-    int i = 0;
-    int j = 0;
-    char *str;
+	int		len;
+	int		i;
+	int		j;
+	char	*str;
 
-    while (s1[j])
-        j++;
-    while (s1[i] && ft_is_set(s1[i], set))
-    	i++;
-    j -= 1;
-    while (j >= 0 && ft_is_set(s1[j], set))
-        j--;
-    str = malloc(sizeof(char) * (j - i + 1));
-    while (i <= j)
-        str[len++] = s1[i++];
-    str[len] = '\0';
-    return (str);
+	len = 0;
+	i = 0;
+	j = 0;
+	while (s1[j])
+		j++;
+	while (s1[i] && ft_is_set(s1[i], set))
+		i++;
+	j -= 1;
+	while (j >= 0 && ft_is_set(s1[j], set))
+		j--;
+	str = malloc(sizeof(char) * (j - i + 1));
+	while (i <= j)
+		str[len++] = s1[i++];
+	str[len] = '\0';
+	return (str);
 }
-
 
 /*
-int main()
+int	main(void)
 {
     char *str = "aaaJe suis une fluteaaa";
     char set = 'a';

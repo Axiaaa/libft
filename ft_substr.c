@@ -12,11 +12,10 @@
 
 #include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-
-	char *dest;
-	int i;
+	char	*dest;
+	int		i;
 
 	i = 0;
 	dest = malloc(sizeof(char) * (len + 1));
@@ -26,7 +25,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return (dest);
 }
 /*
-int main()
+int	main(void)
 {
 	#include <stdio.h>
 	printf("%s", ft_substr("Je suis une flute", 8, 5));
