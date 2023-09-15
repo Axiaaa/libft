@@ -14,7 +14,7 @@ HEADER = libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADER)
+$(NAME): $(OBJ) 
 	ar rcs $(NAME) $(OBJ)
 	@echo "\033[32m$(NAME) created !\033[0m"
 
@@ -24,6 +24,8 @@ $(DIR)/%.o: %.c | $(DIR)
 
 $(DIR):
 	mkdir -p $(DIR)
+
+$(OBJ): $(HEADER)
 
 clean:
 	rm -rf $(DIR) 
