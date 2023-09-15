@@ -10,10 +10,11 @@ SRC =   ./objs/ft_atoi.c ./objs/ft_bzero.c ./objs/ft_isalnum.c ./objs/ft_isalpha
 OBJ = $(SRC:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 DIR = ./objs
+HEADER = libft.h
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADER)
 	ar rcs $(NAME) $(OBJ)
 	@echo "\033[32m$(NAME) created !\033[0m"
 
