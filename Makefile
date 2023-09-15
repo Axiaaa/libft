@@ -14,7 +14,7 @@ DIR = ./objs
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 	@echo "\033[32m$(NAME) created !\033[0m"
 
 
@@ -25,11 +25,11 @@ $(DIR):
 	mkdir -p $(DIR)
 
 clean:
-	@rm -rf $(DIR) 
+	rm -rf $(DIR) 
 	@echo "\033[31mObjects deleted !\033[0m" 
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 	@echo "\033[33m$(NAME) deleted !\033[0m"
 
 re: fclean all
