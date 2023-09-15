@@ -12,7 +12,6 @@
 
 #include "libft.h"
 
-
 char	*ft_strchr(const char *s, int c)
 {
 	char	car;
@@ -32,4 +31,3 @@ char	*ft_strchr(const char *s, int c)
 		return (&str[i]);
 	return (0);
 }
-

@@ -6,14 +6,15 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:26:23 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/14 18:19:38 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/15 09:19:23 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-typedef unsigned long	size_t;
+# include <stdlib.h>
+# include <unistd.h>
 
 int						ft_atoi(const char *str);
 int						ft_isalnum(int c);
@@ -38,7 +39,8 @@ char					**ft_split(char const *s, char c);
 char					*ft_strchr(const char *s, int c);
 char					*ft_strdup(const char *str);
 char					*ft_strjoin(char const *s1, char const *s2);
-char					*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char					*ft_strmapi(char const *s, char (*f)(unsigned int,
+								char));
 char					*ft_itoa(int n);
 size_t					ft_strlcat(char *dest, const char *src, size_t size);
 size_t					ft_strlcpy(char *dest, const char *src, size_t size);
@@ -51,8 +53,5 @@ char					*ft_substr(char const *s, unsigned int start,
 							size_t len);
 int						ft_tolower(int c);
 int						ft_toupper(int c);
-
-# include <stdlib.h>
-# include <unistd.h>
 
 #endif

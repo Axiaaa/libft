@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:09 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/14 19:38:42 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/15 10:05:40 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 static char	*ft_case_zero(char *dest)
 {
+	dest = malloc(sizeof(char) * 2);
+	if (!dest)
+		return (NULL);
 	dest[0] = '0';
 	dest[1] = '\0';
 	return (dest);
@@ -33,6 +36,13 @@ static char	*tab_writing(int nb, unsigned int n, int index, char *dest)
 	return (dest);
 }
 
+static unsigned int	ft_abs(int nb)
+{
+	if (nb < 0)
+		return (-nb);
+	return (nb);
+}
+
 char	*ft_itoa(int nb)
 {
 	unsigned int	nb_count;
@@ -43,18 +53,12 @@ char	*ft_itoa(int nb)
 	i = 1;
 	if (nb == 0)
 	{
-		dest = malloc(sizeof(char) * 2);
-		if (!dest)
-			return (NULL);
+		dest = NULL;
 		return (ft_case_zero(dest));
 	}
 	if (nb < 0)
-	{
 		i++;
-		n = -nb;
-	}
-	else
-		n = nb;
+	n = ft_abs(nb);
 	nb_count = n;
 	while (nb_count > 9)
 	{

@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:54:45 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/14 19:02:44 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/15 09:17:17 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int minus;
-	int nb;
+	int	i;
+	int	minus;
+	int	nb;
 
 	i = 0;
 	minus = 1;
 	nb = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\r'
-	|| str[i] == '\f' || str[i] == ' ')
+	while (str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\v' || str[i] == '\r'
+		|| str[i] == '\f' || str[i] == ' ')
 		i++;
 	if (str[i] == '-')
 	{
@@ -33,7 +34,7 @@ int	ft_atoi(const char *str)
 		i++;
 	while (ft_isdigit(str[i]))
 	{
-		nb = (nb * 10)  + (str[i] - '0');
+		nb = (nb * 10) + (str[i] - '0');
 		i++;
 	}
 	return (nb * minus);
