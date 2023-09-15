@@ -17,7 +17,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@echo "$(NAME) created"
+	@echo "\033[32m$(NAME) created !\033[0m"
+
 
 $(DIR)/%.o: %.c | $(DIR)
 	$(CC) $(FLAGS) -c $< -o $@
@@ -26,12 +27,12 @@ $(DIR):
 	mkdir -p $(DIR)
 
 clean:
-	@rm -rf $(DIR)
-	@echo "Objects deleted"
+	@rm -rf $(DIR) 
+	@echo "\033[31mObjects deleted !\033[0m" 
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(NAME) deleted"
+	@echo "\033[33m$(NAME) deleted !\033[0m"
 
 re: fclean all
 
