@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:39 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/14 19:49:17 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/15 08:58:16 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,3 +83,13 @@ char		**ft_split(char const *s, char c)
 	return (strs);
 }
 
+int main()
+{
+	char *str = "salut les amis";
+	char **tab = ft_split(str, ' ');
+	printf("%s\n", tab[0]);
+	printf("%s\n", tab[1]);
+	printf("%s\n", tab[2]);
+	printf("%s\n", tab[3]);
+	return (0);
+}
