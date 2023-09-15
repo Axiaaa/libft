@@ -13,8 +13,6 @@ DIR = ./objs
 
 all: $(NAME)
 
-#Compile in ./objs/ but with no relink
-
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 	@echo "\033[32m$(NAME) created !\033[0m"
