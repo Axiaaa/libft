@@ -6,32 +6,34 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:39 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/15 08:58:16 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/09/15 09:11:08 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_is_sep(char c, char charset)
+{
+	return (c == charset);
+}
 
-static int	ft_count_word(char const *s, char c)
+static int	ft_count_word(char const *str, char c)
 {
 	int i;
-	int word;
+	int words;
 
 	i = 0;
-	word = 0;
-	while (s && s[i])
+	words = 0;
+	while (str[i])
 	{
-		if (s[i] != c)
-		{
-			word++;
-			while (s[i] != c && s[i])
-				i++;
-		}
-		else
+		while (str[i] && ft_is_sep(str[i], c))
+			i++;
+		if (str[i])
+			words++;
+		while (str[i] && (!(ft_is_sep(str[i], c))))
 			i++;
 	}
-	return (word);
+	return (words);
 }
 
 static int	ft_size_word(char const *s, char c, int i)
@@ -81,15 +83,4 @@ char		**ft_split(char const *s, char c)
 	}
 	strs[j] = 0;
 	return (strs);
-}
-
-int main()
-{
-	char *str = "salut les amis";
-	char **tab = ft_split(str, ' ');
-	printf("%s\n", tab[0]);
-	printf("%s\n", tab[1]);
-	printf("%s\n", tab[2]);
-	printf("%s\n", tab[3]);
-	return (0);
 }
