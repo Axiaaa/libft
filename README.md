@@ -7,3 +7,4 @@ Things to add once the project is finished
 - ft_sqrt
 - ft_sort_int_tab
 - ft_is_negative
+- ft_memfcpy (Copie 'src' dans 'dest' et free 'src')
