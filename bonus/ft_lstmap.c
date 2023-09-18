@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 13:49:46 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/18 14:32:45 by lcamerly         ###   ########.fr       */
+/*   Created: 2023/09/18 14:02:55 by lcamerly          #+#    #+#             */
+/*   Updated: 2023/09/18 14:32:43 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "/home/Nephtys/libft/libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		i;
-	t_list	*temp;
+	t_list	*new_list;
+	t_list	*new_node;
+	void	*set;
 
-	temp = lst;
-	i = 0;
-	while (i < (ft_lstsize(lst) - 1))
+	if (!lst || !f || !del)
+		return (NULL);
+	new_list = NULL;
+	while (lst)
 	{
-		temp = temp->next;
-		i++;
+		set = f(lst->content);
+		new_node = ft_lstnew(set);
+		if (!new_node)
+		{
+			del(set);
+			ft_lstclear(&new_list, (*del));
+			return (new_list);
+		}
+		ft_lstadd_back(&new_list, new_node);
+		lst = lst->next;
 	}
-	return (temp);
+	return (new_list);
 }

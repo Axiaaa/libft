@@ -1,41 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 13:54:45 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/18 14:32:09 by lcamerly         ###   ########.fr       */
+/*   Created: 2023/09/18 13:55:40 by lcamerly          #+#    #+#             */
+/*   Updated: 2023/09/18 14:32:48 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "/home/Nephtys/libft/libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
-	int	minus;
-	int	nb;
-
-	i = 0;
-	minus = 1;
-	nb = 0;
-	while (str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\v' || str[i] == '\r'
-		|| str[i] == '\f' || str[i] == ' ')
-		i++;
-	if (str[i] == '-')
+	while (lst)
 	{
-		minus = -1;
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	else if (str[i] == '+')
-		i++;
-	while (ft_isdigit(str[i]))
-	{
-		nb = (nb * 10) + (str[i] - '0');
-		i++;
-	}
-	return (nb * minus);
 }
