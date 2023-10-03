@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: nephtys <nephtys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 13:48:21 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/18 14:33:55 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/10/03 20:56:35 by nephtys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/home/Nephtys/libft/libft.h"
+#include "../libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

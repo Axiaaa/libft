@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: nephtys <nephtys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 11:15:01 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/18 14:32:42 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/10/03 20:56:26 by nephtys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/home/Nephtys/libft/libft.h"
+#include "../libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

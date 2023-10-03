@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: nephtys <nephtys@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 16:40:22 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/18 14:32:51 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/10/03 20:56:31 by nephtys          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/home/Nephtys/libft/libft.h"
+#include "../libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
