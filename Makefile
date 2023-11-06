@@ -35,8 +35,6 @@ bonus : $(OBJ_BONUS)
 	ar rcs $(NAME) $(OBJ_BONUS)
 	@echo "\033[32mBonuses add to $(NAME)!\033[0m"
 
-
-
 clean:
 	rm -rf $(DIR)
 	rm -f $(OBJ_BONUS)

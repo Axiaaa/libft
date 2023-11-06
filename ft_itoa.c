@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:09 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/15 10:05:40 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:37:58 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,4 @@ char	*ft_itoa(int nb)
 		return (NULL);
 	return (tab_writing(nb, n, i, dest));
 }
-/*
-int	main(void)
-{
-	#include <stdio.h>
-	for (int i = 0; i < 14567890; i + i + 1)
-		printf("%s\n", ft_itoa(i));
 
-}*/
