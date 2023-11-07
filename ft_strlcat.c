@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 10:53:30 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/11/06 14:37:58 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/07 21:28:47 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int	k;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	while (i < size && dest[i] != '\0')
