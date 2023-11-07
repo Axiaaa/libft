@@ -29,9 +29,9 @@ $(DIR):
 
 $(OBJ): $(HEADER)
 
+$(OBJ_BONUS): $(HEADER)
 
 bonus : $(OBJ_BONUS)
-
 	ar rcs $(NAME) $(OBJ_BONUS)
 	@echo "\033[32mBonuses added to $(NAME)!\033[0m"
 
