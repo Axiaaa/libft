@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:31:58 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/14 10:41:37 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/09 14:28:44 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (*ptr == (unsigned char)c)
-			return (ptr);
+			return ((void *)ptr);
 		ptr++;
 		i++;
 	}

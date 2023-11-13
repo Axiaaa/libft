@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:55:39 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/11/06 16:42:43 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:14:21 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,16 +84,16 @@ static int	ft_add_words(char **strs, char const *s, char c, int word)
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	int		word;
+	int		count_of_words;
 	int		check;
 
 	if (!s)
 		return (NULL);
-	word = ft_count_word(s, c);
-	strs = malloc(sizeof(char *) * (word + 1));
+	count_of_words = ft_count_word(s, c);
+	strs = malloc(sizeof(char *) * (count_of_words + 1));
 	if (!strs)
 		return (NULL);
-	check = ft_add_words(strs, s, c, word);
+	check = ft_add_words(strs, s, c, count_of_words);
 	if (!check)
 		return (NULL);
 	return (strs);

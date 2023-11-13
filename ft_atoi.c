@@ -6,24 +6,31 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 13:54:45 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/11/06 15:17:18 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:10:19 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	is_whitespace(char c)
+{
+	if (c == '\t' || c == '\n'
+		|| c == '\v' || c == '\r'
+		|| c == '\f' || c == ' ')
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	minus;
-	int	nb;
+	size_t		i;
+	long long	minus;
+	long long	nb;
 
 	i = 0;
 	minus = 1;
 	nb = 0;
-	while (str[i] == '\t' || str[i] == '\n'
-		|| str[i] == '\v' || str[i] == '\r'
-		|| str[i] == '\f' || str[i] == ' ')
+	while (is_whitespace(str[i]))
 		i++;
 	if (str[i] == '-')
 	{
@@ -32,10 +39,12 @@ int	ft_atoi(const char *str)
 	}
 	else if (str[i] == '+')
 		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]))
 	{
+		if (nb != ((nb * 10) + (str[i] - 48)) / 10)
+			return ((minus + 1) / -2);
 		nb = (nb * 10) + (str[i] - '0');
 		i++;
 	}
-	return (nb * minus);
+	return ((int)nb * minus);
 }

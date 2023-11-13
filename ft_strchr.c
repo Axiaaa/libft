@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:39:45 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/11/06 16:45:20 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:12:00 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if ((char)c == '\0')
 		return (&str[i]);
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 10:34:41 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/15 09:57:33 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:10:19 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
+	if (size && nmemb > SIZE_MAX / size)
+		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!(ptr))
-		return (0);
+		return (NULL);
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }

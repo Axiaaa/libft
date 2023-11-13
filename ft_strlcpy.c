@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 10:10:49 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/15 09:59:42 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/08 14:00:07 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	i = 0;
 	len = 0;
 	if (!dest || !src)
-		return (0);
+		return (i);
 	while (src[len])
 		len++;
 	if (size == 0)

@@ -6,7 +6,7 @@
 /*   By: lcamerly <lcamerly@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 11:33:52 by lcamerly          #+#    #+#             */
-/*   Updated: 2023/09/14 18:25:40 by lcamerly         ###   ########.fr       */
+/*   Updated: 2023/11/08 13:14:23 by lcamerly         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ char	*ft_strnstr(char *str, char *to_find, size_t len)
 			return (&str[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
