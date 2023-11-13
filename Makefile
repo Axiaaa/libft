@@ -1,4 +1,5 @@
 NAME = libft.a
+NAME_BONUS = libftbonus.a
 CC = gcc
 SRC =   ./objs/ft_atoi.c ./objs/ft_bzero.c ./objs/ft_isalnum.c ./objs/ft_isalpha.c ./objs/ft_isascii.c ./objs/ft_isdigit.c \
 		./objs/ft_isprint.c ./objs/ft_itoa.c ./objs/ft_memset.c ./objs/ft_putchar_fd.c \
@@ -25,6 +26,9 @@ $(NAME): $(OBJ)
 $(DIR)/%.o: %.c | $(DIR)
 	$(CC) $(FLAGS) -c $< -o $@
 
+$(DIR_BONUS)/%.o: %.c
+	$(CC) $(FLAGS) -c $< -o $@
+
 $(DIR):
 	mkdir -p $(DIR)
 
@@ -32,9 +36,12 @@ $(OBJ): $(HEADER)
 
 $(OBJ_BONUS): $(HEADER)
 
-bonus : $(NAME) $(OBJ_BONUS)
-	ar rcs $(NAME) $(OBJ_BONUS)
+bonus : $(NAME_BONUS)
+
+$(NAME_BONUS) : $(OBJ) $(OBJ_BONUS)
+	ar rcs $(NAME_BONUS) $(OBJ) $(OBJ_BONUS)
 	@echo "\033[32mBonuses added to $(NAME)!\033[0m"
+	@cp $(NAME_BONUS) $(NAME)
 
 clean:
 	rm -rf $(DIR)
