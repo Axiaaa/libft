@@ -1,6 +1,6 @@
 NAME = libft.a
 NAME_BONUS = libftbonus.a
-CC = gcc
+CC = cc
 SRC =   ./objs/ft_atoi.c ./objs/ft_bzero.c ./objs/ft_isalnum.c ./objs/ft_isalpha.c ./objs/ft_isascii.c ./objs/ft_isdigit.c \
 		./objs/ft_isprint.c ./objs/ft_itoa.c ./objs/ft_memset.c ./objs/ft_putchar_fd.c \
 		./objs/ft_putendl_fd.c ./objs/ft_putnbr_fd.c ./objs/ft_strchr.c ./objs/ft_striteri.c \
@@ -24,10 +24,10 @@ $(NAME): $(OBJ)
 	@echo "\033[32m$(NAME) created !\033[0m"
 
 $(DIR)/%.o: %.c | $(DIR)
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -I /$(HEADER) -c $< -o $@
 
 $(DIR_BONUS)/%.o: %.c
-	$(CC) $(FLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -I /$(HEADER) -c $< -o $@
 
 $(DIR):
 	mkdir -p $(DIR)
