@@ -24,10 +24,10 @@ $(NAME): $(OBJ)
 	@echo "\033[32m$(NAME) created !\033[0m"
 
 $(DIR)/%.o: %.c | $(DIR)
-	$(CC) $(FLAGS) -I /$(HEADER) -c $< -o $@
+	$(CC) $(FLAGS) -I. -c $< -o $@
 
-$(DIR_BONUS)/%.o: %.c
-	$(CC) $(FLAGS) -I /$(HEADER) -c $< -o $@
+$(DIR_BONUS)/%.o: $(DIR_BONUS)/%.c
+	$(CC) $(FLAGS) -I. -c $< -o $@
 
 $(DIR):
 	mkdir -p $(DIR)
@@ -40,17 +40,14 @@ bonus : $(NAME_BONUS)
 
 $(NAME_BONUS) : $(OBJ) $(OBJ_BONUS)
 	ar rcs $(NAME_BONUS) $(OBJ) $(OBJ_BONUS)
-	@echo "\033[32mBonuses added to $(NAME)!\033[0m"
 	@cp $(NAME_BONUS) $(NAME)
 
 clean:
 	rm -rf $(DIR)
 	rm -rf $(OBJ_BONUS)
-	@echo "\033[31mObjects deleted !\033[0m" 
 
 fclean: clean
 	rm -f $(NAME)
-	@echo "\033[33m$(NAME) deleted !\033[0m"
 
 re: fclean all
 
